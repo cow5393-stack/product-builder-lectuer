@@ -43,6 +43,22 @@ customElements.define('lotto-ball', LottoBall);
 
 const generateButton = document.getElementById('generate-button');
 const lottoNumbersContainer = document.getElementById('lotto-numbers');
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Theme logic
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'dark') {
+    body.classList.add('dark-mode');
+    themeToggle.textContent = '🌙';
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDark = body.classList.contains('dark-mode');
+    themeToggle.textContent = isDark ? '🌙' : '☀️';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
 
 generateButton.addEventListener('click', () => {
     lottoNumbersContainer.innerHTML = '';
