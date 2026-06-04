@@ -211,18 +211,49 @@ lotto-ball {
     }
 }
 
-.lang-toggle, .theme-toggle {
-    background: none;
-    border: 1px solid var(--text-secondary);
-    color: var(--text-color);
-    padding: 5px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: all 0.2s;
+.fortune-details {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 100%;
 }
 
-.lang-toggle:hover, .theme-toggle:hover {
-    background: var(--text-secondary);
-    color: white;
+.fortune-item {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.fortune-item:hover {
+    transform: translateY(-3px);
+}
+
+.fortune-item .label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.fortune-item .value {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--button-bg);
+}
+
+@keyframes pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.analyzing-text {
+    animation: pulse 1.5s infinite;
+    font-weight: bold;
+    color: var(--button-bg);
 }

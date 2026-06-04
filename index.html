@@ -3,69 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional Lotto Number Generator with statistical tips and lucky insights.">
-    <meta name="keywords" content="Lotto, Number Generator, Luck, Statistics, Random Numbers">
-    <title>Lotto Pro - Smart Number Generator</title>
+    <title>Lotto Pro - 스마트 로또 번호 생성기</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
         <div class="header-content">
-            <span class="logo">🍀 Lotto Pro</span>
+            <div class="logo">Lotto Pro</div>
             <div class="controls">
-                <button id="lang-toggle" class="lang-toggle" title="Switch Language">EN / KR</button>
-                <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">☀️</button>
+                <button id="lang-toggle" class="lang-toggle">EN</button>
+                <button id="theme-toggle" class="theme-toggle">☀️</button>
             </div>
         </div>
     </header>
 
     <main class="container">
         <section class="generator-section">
-            <h1 id="main-title">Lotto Number Generator</h1>
-            <p id="sub-title" class="sub-title">Your lucky numbers are just a click away.</p>
+            <h1 id="main-title">스마트 로또 번호 생성기</h1>
+            <p id="sub-title" class="sub-title">당신의 행운이 클릭 한 번으로 시작됩니다.</p>
             
             <div id="lotto-numbers" class="lotto-numbers">
-                <!-- Balls will be generated here -->
+                <!-- Lotto balls will be injected here -->
             </div>
 
             <div class="action-area">
-                <button id="generate-button" class="generate-button">Generate Numbers</button>
+                <button id="generate-button" class="generate-button">번호 생성하기</button>
                 <div id="lucky-quote" class="lucky-quote"></div>
-            </div>
-
-            <div id="luck-gauge-container" class="luck-gauge-container hidden">
-                <div class="gauge-label" id="gauge-label">Luck Potential:</div>
-                <div class="gauge-bar">
-                    <div id="gauge-fill" class="gauge-fill"></div>
+                
+                <div id="luck-gauge-container" class="luck-gauge-container hidden">
+                    <div id="gauge-label" class="gauge-label">오늘의 행운 지수:</div>
+                    <div class="gauge-bar">
+                        <div id="gauge-fill" class="gauge-fill"></div>
+                    </div>
+                    <div id="fortune-details" class="fortune-details">
+                        <!-- Detailed fortune will be injected here -->
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="content-section">
-            <article class="content-card">
-                <h2 id="tips-title">Lotto Winning Tips</h2>
+            <div class="content-card">
+                <h2 id="tips-title">로또 당첨 팁</h2>
                 <ul id="tips-list">
-                    <li>Analyze frequency of past winning numbers.</li>
-                    <li>Avoid choosing only consecutive numbers.</li>
-                    <li>Balance even and odd numbers for better odds.</li>
+                    <!-- Tips will be injected here -->
                 </ul>
-            </article>
-
-            <article class="content-card">
-                <h2 id="about-title">Why Lotto Pro?</h2>
-                <p id="about-text">We provide a high-quality random number generation algorithm that ensures fair and truly random results for your next lotto purchase.</p>
-            </article>
+            </div>
+            <div class="content-card">
+                <h2 id="about-title">왜 Lotto Pro인가요?</h2>
+                <p id="about-text">우리는 진정한 무작위성을 보장하는 고품질 알고리즘을 통해 당신의 당첨 확률을 높이는 데 도움을 줍니다.</p>
+            </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="footer-links">
-            <a href="#" id="privacy-link">Privacy Policy</a>
-            <a href="#" id="terms-link">Terms of Service</a>
+            <a href="#" id="privacy-link">개인정보처리방침</a>
+            <a href="#" id="terms-link">이용약관</a>
         </div>
-        <p>&copy; 2024 Lotto Pro. All rights reserved.</p>
+        <p>&copy; 2026 Lotto Pro. All rights reserved.</p>
     </footer>
 
-    <script src="main.js" type="module"></script>
+    <script src="main.js"></script>
 </body>
 </html>

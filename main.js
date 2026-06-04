@@ -21,6 +21,15 @@ const translations = {
             "긍정적인 생각이 행운을 부릅니다.",
             "당신은 오늘 충분히 당첨될 자격이 있습니다."
         ],
+        fortuneLabels: {
+            overall: "전체 행운",
+            wealth: "재물 기운",
+            direction: "행운의 방향",
+            color: "행운의 색상"
+        },
+        directions: ["동쪽", "서쪽", "남쪽", "북쪽", "북동쪽", "남서쪽"],
+        colors: ["금색", "은색", "빨간색", "파란색", "초록색", "보라색"],
+        analyzing: "당신의 행운을 분석하는 중...",
         privacy: "개인정보처리방침",
         terms: "이용약관"
     },
@@ -45,6 +54,15 @@ const translations = {
             "Positive thoughts attract good luck.",
             "You deserve a big win today."
         ],
+        fortuneLabels: {
+            overall: "Overall Luck",
+            wealth: "Wealth Energy",
+            direction: "Lucky Direction",
+            color: "Lucky Color"
+        },
+        directions: ["East", "West", "South", "North", "Northeast", "Southwest"],
+        colors: ["Gold", "Silver", "Red", "Blue", "Green", "Purple"],
+        analyzing: "Analyzing your luck...",
         privacy: "Privacy Policy",
         terms: "Terms of Service"
     }
@@ -167,36 +185,72 @@ langToggle.addEventListener('click', () => {
     updateLanguage();
 });
 
-generateButton.addEventListener('click', () => {
-    lottoNumbersContainer.innerHTML = '';
-    luckGaugeContainer.classList.remove('hidden');
-    
-    const numbers = new Set();
-    while (numbers.size < 6) {
-        const randomNumber = Math.floor(Math.random() * 45) + 1;
-        numbers.add(randomNumber);
-    }
+function generateDetailedFortune() {
+    const t = translations[currentLang];
+    const detailsContainer = document.getElementById('fortune-details');
+    detailsContainer.innerHTML = '';
 
-    const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
+    const categories = [
+        { label: t.fortuneLabels.overall, value: Math.floor(Math.random() * 20) + 80 + '%' },
+        { label: t.fortuneLabels.wealth, value: ['★ ★ ★ ★ ★', '★ ★ ★ ★', '★ ★ ★'][Math.floor(Math.random() * 3)] },
+        { label: t.fortuneLabels.direction, value: t.directions[Math.floor(Math.random() * t.directions.length)] },
+        { label: t.fortuneLabels.color, value: t.colors[Math.floor(Math.random() * t.colors.length)] }
+    ];
 
-    // Staggered display
-    sortedNumbers.forEach((number, index) => {
-        const lottoBall = document.createElement('lotto-ball');
-        lottoBall.setAttribute('number', number);
-        lottoBall.setAttribute('delay', `${index * 0.15}s`);
-        lottoNumbersContainer.appendChild(lottoBall);
+    categories.forEach(cat => {
+        const item = document.createElement('div');
+        item.className = 'fortune-item';
+        item.innerHTML = `
+            <span class="label">${cat.label}</span>
+            <span class="value">${cat.value}</span>
+        `;
+        detailsContainer.appendChild(item);
     });
+}
 
-    // Creative Details: Lucky Quote
-    const quotes = translations[currentLang].quotes;
-    luckyQuote.textContent = quotes[Math.floor(Math.random() * quotes.length)];
-    luckyQuote.style.opacity = 0;
-    setTimeout(() => luckyQuote.style.opacity = 1, 500);
+generateButton.addEventListener('click', () => {
+    const t = translations[currentLang];
+    
+    // UI Reset & Analysis State
+    lottoNumbersContainer.innerHTML = '';
+    luckGaugeContainer.classList.add('hidden');
+    luckyQuote.innerHTML = `<span class="analyzing-text">${t.analyzing}</span>`;
+    luckyQuote.style.opacity = 1;
+    generateButton.disabled = true;
 
-    // Creative Details: Luck Gauge (Random fun value)
-    const luckValue = Math.floor(Math.random() * 30) + 70; // 70-100%
-    gaugeFill.style.width = '0%';
+    // Simulate analysis delay
     setTimeout(() => {
-        gaugeFill.style.width = `${luckValue}%`;
-    }, 100);
+        generateButton.disabled = false;
+        luckGaugeContainer.classList.remove('hidden');
+        
+        const numbers = new Set();
+        while (numbers.size < 6) {
+            const randomNumber = Math.floor(Math.random() * 45) + 1;
+            numbers.add(randomNumber);
+        }
+
+        const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
+
+        // Staggered display
+        sortedNumbers.forEach((number, index) => {
+            const lottoBall = document.createElement('lotto-ball');
+            lottoBall.setAttribute('number', number);
+            lottoBall.setAttribute('delay', `${index * 0.15}s`);
+            lottoNumbersContainer.appendChild(lottoBall);
+        });
+
+        // Lucky Quote
+        const quotes = t.quotes;
+        luckyQuote.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+        
+        // Detailed Fortune
+        generateDetailedFortune();
+
+        // Luck Gauge
+        const luckValue = Math.floor(Math.random() * 30) + 70; // 70-100%
+        gaugeFill.style.width = '0%';
+        setTimeout(() => {
+            gaugeFill.style.width = `${luckValue}%`;
+        }, 100);
+    }, 1500);
 });
