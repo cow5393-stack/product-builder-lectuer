@@ -1,4 +1,55 @@
 
+const translations = {
+    ko: {
+        title: "스마트 로또 번호 생성기",
+        subtitle: "당신의 행운이 클릭 한 번으로 시작됩니다.",
+        generate: "번호 생성하기",
+        gauge: "오늘의 행운 지수:",
+        tipsTitle: "로또 당첨 팁",
+        tips: [
+            "과거 당첨 번호의 빈도를 분석해 보세요.",
+            "연속된 번호 선택은 가급적 피하는 것이 좋습니다.",
+            "홀수와 짝수의 균형을 맞춰보세요.",
+            "나만의 특별한 숫자를 포함시켜 보세요."
+        ],
+        aboutTitle: "왜 Lotto Pro인가요?",
+        aboutText: "우리는 진정한 무작위성을 보장하는 고품질 알고리즘을 통해 당신의 당첨 확률을 높이는 데 도움을 줍니다.",
+        quotes: [
+            "오늘 당신의 운세가 매우 밝습니다!",
+            "작은 시도가 큰 행운으로 돌아옵니다.",
+            "이 번호들이 당신을 경제적 자유로 인도할 것입니다.",
+            "긍정적인 생각이 행운을 부릅니다.",
+            "당신은 오늘 충분히 당첨될 자격이 있습니다."
+        ],
+        privacy: "개인정보처리방침",
+        terms: "이용약관"
+    },
+    en: {
+        title: "Lotto Number Generator Pro",
+        subtitle: "Your lucky numbers are just a click away.",
+        generate: "Generate Numbers",
+        gauge: "Luck Potential:",
+        tipsTitle: "Lotto Winning Tips",
+        tips: [
+            "Analyze frequency of past winning numbers.",
+            "Avoid choosing only consecutive numbers.",
+            "Balance even and odd numbers for better odds.",
+            "Include your own special numbers."
+        ],
+        aboutTitle: "Why Lotto Pro?",
+        aboutText: "We provide a high-quality random number generation algorithm that ensures fair and truly random results.",
+        quotes: [
+            "Your fortune looks very bright today!",
+            "Small attempts lead to big luck.",
+            "May these numbers lead you to freedom.",
+            "Positive thoughts attract good luck.",
+            "You deserve a big win today."
+        ],
+        privacy: "Privacy Policy",
+        terms: "Terms of Service"
+    }
+};
+
 class LottoBall extends HTMLElement {
     constructor() {
         super();
@@ -7,10 +58,19 @@ class LottoBall extends HTMLElement {
 
     connectedCallback() {
         const number = this.getAttribute('number');
+        const delay = this.getAttribute('delay') || '0s';
         const color = this.getColor(number);
 
         this.shadowRoot.innerHTML = `
             <style>
+                :host {
+                    display: block;
+                    width: 60px;
+                    height: 60px;
+                    opacity: 0;
+                    animation: dropIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+                    animation-delay: ${delay};
+                }
                 .ball {
                     width: 60px;
                     height: 60px;
@@ -23,6 +83,12 @@ class LottoBall extends HTMLElement {
                     font-weight: bold;
                     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
                     background-color: ${color};
+                    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+                }
+                @keyframes dropIn {
+                    0% { transform: translateY(-50px) scale(0); opacity: 0; }
+                    60% { transform: translateY(10px) scale(1.1); }
+                    100% { transform: translateY(0) scale(1); opacity: 1; }
                 }
             </style>
             <div class="ball">${number}</div>
@@ -41,18 +107,53 @@ class LottoBall extends HTMLElement {
 
 customElements.define('lotto-ball', LottoBall);
 
+// DOM Elements
 const generateButton = document.getElementById('generate-button');
 const lottoNumbersContainer = document.getElementById('lotto-numbers');
 const themeToggle = document.getElementById('theme-toggle');
+const langToggle = document.getElementById('lang-toggle');
+const luckyQuote = document.getElementById('lucky-quote');
+const luckGaugeContainer = document.getElementById('luck-gauge-container');
+const gaugeFill = document.getElementById('gauge-fill');
 const body = document.body;
 
-// Theme logic
+// State
+let currentLang = localStorage.getItem('lang') || 'ko';
+
+// Update UI Text
+function updateLanguage() {
+    const t = translations[currentLang];
+    document.getElementById('main-title').textContent = t.title;
+    document.getElementById('sub-title').textContent = t.subtitle;
+    generateButton.textContent = t.generate;
+    document.getElementById('gauge-label').textContent = t.gauge;
+    document.getElementById('tips-title').textContent = t.tipsTitle;
+    document.getElementById('about-title').textContent = t.aboutTitle;
+    document.getElementById('about-text').textContent = t.aboutText;
+    document.getElementById('privacy-link').textContent = t.privacy;
+    document.getElementById('terms-link').textContent = t.terms;
+    
+    const tipsList = document.getElementById('tips-list');
+    tipsList.innerHTML = '';
+    t.tips.forEach(tip => {
+        const li = document.createElement('li');
+        li.textContent = tip;
+        tipsList.appendChild(li);
+    });
+
+    langToggle.textContent = currentLang === 'ko' ? 'EN' : 'KR';
+    document.documentElement.lang = currentLang;
+}
+
+// Initial Setup
 const currentTheme = localStorage.getItem('theme');
 if (currentTheme === 'dark') {
     body.classList.add('dark-mode');
     themeToggle.textContent = '🌙';
 }
+updateLanguage();
 
+// Events
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     const isDark = body.classList.contains('dark-mode');
@@ -60,8 +161,16 @@ themeToggle.addEventListener('click', () => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
 
+langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'ko' ? 'en' : 'ko';
+    localStorage.setItem('lang', currentLang);
+    updateLanguage();
+});
+
 generateButton.addEventListener('click', () => {
     lottoNumbersContainer.innerHTML = '';
+    luckGaugeContainer.classList.remove('hidden');
+    
     const numbers = new Set();
     while (numbers.size < 6) {
         const randomNumber = Math.floor(Math.random() * 45) + 1;
@@ -70,9 +179,24 @@ generateButton.addEventListener('click', () => {
 
     const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
 
-    sortedNumbers.forEach(number => {
+    // Staggered display
+    sortedNumbers.forEach((number, index) => {
         const lottoBall = document.createElement('lotto-ball');
         lottoBall.setAttribute('number', number);
+        lottoBall.setAttribute('delay', `${index * 0.15}s`);
         lottoNumbersContainer.appendChild(lottoBall);
     });
+
+    // Creative Details: Lucky Quote
+    const quotes = translations[currentLang].quotes;
+    luckyQuote.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+    luckyQuote.style.opacity = 0;
+    setTimeout(() => luckyQuote.style.opacity = 1, 500);
+
+    // Creative Details: Luck Gauge (Random fun value)
+    const luckValue = Math.floor(Math.random() * 30) + 70; // 70-100%
+    gaugeFill.style.width = '0%';
+    setTimeout(() => {
+        gaugeFill.style.width = `${luckValue}%`;
+    }, 100);
 });

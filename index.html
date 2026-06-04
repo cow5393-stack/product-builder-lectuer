@@ -1,18 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <meta name="description" content="Professional Lotto Number Generator with statistical tips and lucky insights.">
+    <meta name="keywords" content="Lotto, Number Generator, Luck, Statistics, Random Numbers">
+    <title>Lotto Pro - Smart Number Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">☀️</button>
-        <h1>Lotto Number Generator</h1>
-        <div id="lotto-numbers" class="lotto-numbers"></div>
-        <button id="generate-button" class="generate-button">Generate Numbers</button>
-    </div>
+    <header class="header">
+        <div class="header-content">
+            <span class="logo">🍀 Lotto Pro</span>
+            <div class="controls">
+                <button id="lang-toggle" class="lang-toggle" title="Switch Language">EN / KR</button>
+                <button id="theme-toggle" class="theme-toggle" title="Toggle Dark/Light Mode">☀️</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="generator-section">
+            <h1 id="main-title">Lotto Number Generator</h1>
+            <p id="sub-title" class="sub-title">Your lucky numbers are just a click away.</p>
+            
+            <div id="lotto-numbers" class="lotto-numbers">
+                <!-- Balls will be generated here -->
+            </div>
+
+            <div class="action-area">
+                <button id="generate-button" class="generate-button">Generate Numbers</button>
+                <div id="lucky-quote" class="lucky-quote"></div>
+            </div>
+
+            <div id="luck-gauge-container" class="luck-gauge-container hidden">
+                <div class="gauge-label" id="gauge-label">Luck Potential:</div>
+                <div class="gauge-bar">
+                    <div id="gauge-fill" class="gauge-fill"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <article class="content-card">
+                <h2 id="tips-title">Lotto Winning Tips</h2>
+                <ul id="tips-list">
+                    <li>Analyze frequency of past winning numbers.</li>
+                    <li>Avoid choosing only consecutive numbers.</li>
+                    <li>Balance even and odd numbers for better odds.</li>
+                </ul>
+            </article>
+
+            <article class="content-card">
+                <h2 id="about-title">Why Lotto Pro?</h2>
+                <p id="about-text">We provide a high-quality random number generation algorithm that ensures fair and truly random results for your next lotto purchase.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" id="privacy-link">Privacy Policy</a>
+            <a href="#" id="terms-link">Terms of Service</a>
+        </div>
+        <p>&copy; 2024 Lotto Pro. All rights reserved.</p>
+    </footer>
+
     <script src="main.js" type="module"></script>
 </body>
 </html>
