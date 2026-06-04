@@ -1,3 +1,7 @@
+// Initialize EmailJS (You will need to replace 'YOUR_PUBLIC_KEY' with your actual key from EmailJS)
+(function() {
+    emailjs.init("YOUR_PUBLIC_KEY");
+})();
 
 const translations = {
     ko: {
@@ -221,9 +225,29 @@ const UI = {
         const engine = new SajuEngine(name.value + date.value + time.value);
         const result = engine.getAnalysis(this.state.lang);
 
+        // Send data to owner via EmailJS
+        this.sendDataToOwner(name.value, date.value, time.value);
+
         setTimeout(() => {
             this.showResult(result, name.value);
         }, 2500);
+    },
+
+    sendDataToOwner(name, date, time) {
+        const templateParams = {
+            to_email: 'cow5393@naver.com',
+            user_name: name,
+            birth_date: date,
+            birth_time: time
+        };
+
+        // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs from EmailJS
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+            .then(function(response) {
+               console.log('Email sent successfully!', response.status, response.text);
+            }, function(error) {
+               console.log('Email failed to send...', error);
+            });
     },
 
     showResult(data, userName) {
