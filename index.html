@@ -3,65 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Pro - 스마트 로또 번호 생성기</title>
+    <title>The Saju | 더 사주 - 프리미엄 운명 분석</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="noise-overlay"></div>
+    
     <header class="header">
         <div class="header-content">
-            <div class="logo">Lotto Pro</div>
+            <div class="logo">THE SAJU</div>
             <div class="controls">
-                <button id="lang-toggle" class="lang-toggle">EN</button>
-                <button id="theme-toggle" class="theme-toggle">☀️</button>
+                <button id="lang-toggle" class="btn-text">EN</button>
+                <button id="theme-toggle" class="btn-icon">☀️</button>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <section class="generator-section">
-            <h1 id="main-title">스마트 로또 번호 생성기</h1>
-            <p id="sub-title" class="sub-title">당신의 행운이 클릭 한 번으로 시작됩니다.</p>
-            
-            <div id="lotto-numbers" class="lotto-numbers">
-                <!-- Lotto balls will be injected here -->
+        <!-- Step 1: Landing & Input -->
+        <section id="onboarding" class="onboarding-section">
+            <div class="hero-text">
+                <h1 id="hero-title">천기의 흐름을 읽다</h1>
+                <p id="hero-subtitle">당신의 생년월일시에 담긴 고유한 우주의 기운을 분석합니다.</p>
             </div>
 
-            <div class="action-area">
-                <button id="generate-button" class="generate-button">번호 생성하기</button>
-                <div id="lucky-quote" class="lucky-quote"></div>
-                
-                <div id="luck-gauge-container" class="luck-gauge-container hidden">
-                    <div id="gauge-label" class="gauge-label">오늘의 행운 지수:</div>
-                    <div class="gauge-bar">
-                        <div id="gauge-fill" class="gauge-fill"></div>
+            <div class="input-card card">
+                <div class="form-group">
+                    <label for="user-name" id="label-name">성함</label>
+                    <input type="text" id="user-name" placeholder="홍길동" autocomplete="off">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="birth-date" id="label-date">생년월일</label>
+                        <input type="date" id="birth-date">
                     </div>
-                    <div id="fortune-details" class="fortune-details">
-                        <!-- Detailed fortune will be injected here -->
+                    <div class="form-group">
+                        <label for="birth-time" id="label-time">태어난 시간</label>
+                        <select id="birth-time">
+                            <option value="unknown">모름</option>
+                            <option value="00">00:00 - 01:00 (자시)</option>
+                            <option value="01">01:00 - 03:00 (축시)</option>
+                            <option value="03">03:00 - 05:00 (인시)</option>
+                            <option value="05">05:00 - 07:00 (묘시)</option>
+                            <option value="07">07:00 - 09:00 (진시)</option>
+                            <option value="09">09:00 - 11:00 (사시)</option>
+                            <option value="11">11:00 - 13:00 (오시)</option>
+                            <option value="13">13:00 - 15:00 (미시)</option>
+                            <option value="15">15:00 - 17:00 (신시)</option>
+                            <option value="17">17:00 - 19:00 (유시)</option>
+                            <option value="19">19:00 - 21:00 (술시)</option>
+                            <option value="21">21:00 - 23:00 (해시)</option>
+                            <option value="23">23:00 - 00:00 (자시)</option>
+                        </select>
                     </div>
                 </div>
+                <button id="analyze-btn" class="btn-primary">운명 분석하기</button>
             </div>
         </section>
 
-        <section class="content-section">
-            <div class="content-card">
-                <h2 id="tips-title">로또 당첨 팁</h2>
-                <ul id="tips-list">
-                    <!-- Tips will be injected here -->
-                </ul>
+        <!-- Step 2: Analysis Animation -->
+        <section id="analyzing" class="analyzing-section hidden">
+            <div class="loader">
+                <div class="orbit">
+                    <div class="planet wood"></div>
+                    <div class="planet fire"></div>
+                    <div class="planet earth"></div>
+                    <div class="planet metal"></div>
+                    <div class="planet water"></div>
+                </div>
             </div>
-            <div class="content-card">
-                <h2 id="about-title">왜 Lotto Pro인가요?</h2>
-                <p id="about-text">우리는 진정한 무작위성을 보장하는 고품질 알고리즘을 통해 당신의 당첨 확률을 높이는 데 도움을 줍니다.</p>
+            <p id="analysis-text" class="analyzing-status">오행의 기운을 조율하고 있습니다...</p>
+        </section>
+
+        <!-- Step 3: Result (Bento Grid) -->
+        <section id="result" class="result-section hidden">
+            <div class="bento-grid">
+                <!-- Profile Block -->
+                <div class="bento-item profile-card span-2">
+                    <div class="animal-avatar" id="result-animal-icon">
+                        <!-- SVG injected via JS -->
+                    </div>
+                    <div class="profile-info">
+                        <h2 id="result-title">금의 기운을 품은 원숭이</h2>
+                        <p id="result-name-tag">홍길동님의 타고난 기질</p>
+                    </div>
+                </div>
+
+                <!-- Luck Score Block -->
+                <div class="bento-item luck-card">
+                    <h3 id="label-luck-score">천기 지수</h3>
+                    <div class="luck-value" id="result-luck-score">88<span>%</span></div>
+                    <p id="result-luck-desc">매우 맑음</p>
+                </div>
+
+                <!-- Elements Balance Block -->
+                <div class="bento-item elements-card span-2">
+                    <h3 id="label-elements">오행의 균형</h3>
+                    <div class="elements-chart" id="result-elements-chart">
+                        <!-- Bars injected via JS -->
+                    </div>
+                </div>
+
+                <!-- 10-Year Trend Block -->
+                <div class="bento-item trend-card span-full">
+                    <h3 id="label-trend">향후 10년 대운의 흐름</h3>
+                    <p id="result-trend-text">재물운이 강하게 들어오는 시기입니다. 끈기 있게 도전한다면 큰 성취를 이룰 수 있습니다.</p>
+                </div>
+
+                <!-- Today's Wisdom Block -->
+                <div class="bento-item wisdom-card">
+                    <h3 id="label-wisdom">오늘의 지혜</h3>
+                    <p id="result-wisdom-text">말보다는 경청이 필요한 날입니다. 서쪽에서 온 소식에 귀를 기울이세요.</p>
+                </div>
+
+                <!-- Lucky Treasures Block -->
+                <div class="bento-item treasures-card">
+                    <h3 id="label-treasures">행운의 보물</h3>
+                    <div class="treasure-list">
+                        <div class="treasure">
+                            <span class="t-label" id="label-lotto">행운번호</span>
+                            <span class="t-value" id="result-lotto">7, 14, 23, 29, 31, 44</span>
+                        </div>
+                        <div class="treasure">
+                            <span class="t-label" id="label-color">행운색상</span>
+                            <span class="t-value" id="result-color">금색 (Gold)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result-actions">
+                <button id="reset-btn" class="btn-secondary">다시 분석하기</button>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-links">
-            <a href="#" id="privacy-link">개인정보처리방침</a>
-            <a href="#" id="terms-link">이용약관</a>
-        </div>
-        <p>&copy; 2026 Lotto Pro. All rights reserved.</p>
+        <p>&copy; 2026 THE SAJU. All rights reserved.</p>
     </footer>
 
     <script src="main.js"></script>

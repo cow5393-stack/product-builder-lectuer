@@ -1,256 +1,287 @@
 
 const translations = {
     ko: {
-        title: "스마트 로또 번호 생성기",
-        subtitle: "당신의 행운이 클릭 한 번으로 시작됩니다.",
-        generate: "번호 생성하기",
-        gauge: "오늘의 행운 지수:",
-        tipsTitle: "로또 당첨 팁",
-        tips: [
-            "과거 당첨 번호의 빈도를 분석해 보세요.",
-            "연속된 번호 선택은 가급적 피하는 것이 좋습니다.",
-            "홀수와 짝수의 균형을 맞춰보세요.",
-            "나만의 특별한 숫자를 포함시켜 보세요."
+        heroTitle: "천기의 흐름을 읽다",
+        heroSubtitle: "당신의 생년월일시에 담긴 고유한 우주의 기운을 분석합니다.",
+        labelName: "성함",
+        labelDate: "생년월일",
+        labelTime: "태어난 시간",
+        btnAnalyze: "운명 분석하기",
+        analyzing: "오행의 기운을 조율하고 있습니다...",
+        labelLuckScore: "천기 지수",
+        labelElements: "오행의 균형",
+        labelTrend: "향후 10년 대운의 흐름",
+        labelWisdom: "오늘의 지혜",
+        labelTreasures: "행운의 보물",
+        labelLotto: "행운번호",
+        labelColor: "행운색상",
+        btnReset: "다시 분석하기",
+        elements: ["목 (Wood)", "화 (Fire)", "토 (Earth)", "금 (Metal)", "수 (Water)"],
+        animals: ["쥐", "소", "호랑이", "토끼", "용", "뱀", "말", "양", "원숭이", "닭", "개", "돼지"],
+        luckDesc: ["매우 맑음", "안정적임", "활기참", "차분함"],
+        trends: [
+            "재물운이 강하게 들어오는 시기입니다. 끈기 있게 도전한다면 큰 성취를 이룰 수 있습니다.",
+            "새로운 인연이 당신의 삶에 큰 변화를 가져올 것입니다. 소통과 협력에 집중하세요.",
+            "지혜를 쌓고 내실을 다지는 시기입니다. 서두르지 말고 천천히 전진하십시오.",
+            "명예와 지위가 상승하는 기운이 있습니다. 당신의 능력을 세상에 펼칠 기회가 올 것입니다."
         ],
-        aboutTitle: "왜 Lotto Pro인가요?",
-        aboutText: "우리는 진정한 무작위성을 보장하는 고품질 알고리즘을 통해 당신의 당첨 확률을 높이는 데 도움을 줍니다.",
-        quotes: [
-            "오늘 당신의 운세가 매우 밝습니다!",
-            "작은 시도가 큰 행운으로 돌아옵니다.",
-            "이 번호들이 당신을 경제적 자유로 인도할 것입니다.",
-            "긍정적인 생각이 행운을 부릅니다.",
-            "당신은 오늘 충분히 당첨될 자격이 있습니다."
+        wisdoms: [
+            "말보다는 경청이 필요한 날입니다. 서쪽에서 온 소식에 귀를 기울이세요.",
+            "익숙한 것에서 벗어나 새로운 시각을 가져보세요. 의외의 곳에서 답을 찾을 것입니다.",
+            "오늘은 서두르지 않는 것이 최선입니다. 차분한 마음이 행운을 부릅니다.",
+            "주변 사람들에게 따뜻한 말 한마디를 건네보세요. 그 선행이 복이 되어 돌아옵니다."
         ],
-        fortuneLabels: {
-            overall: "전체 행운",
-            wealth: "재물 기운",
-            direction: "행운의 방향",
-            color: "행운의 색상"
-        },
-        directions: ["동쪽", "서쪽", "남쪽", "북쪽", "북동쪽", "남서쪽"],
-        colors: ["금색", "은색", "빨간색", "파란색", "초록색", "보라색"],
-        analyzing: "당신의 행운을 분석하는 중...",
-        privacy: "개인정보처리방침",
-        terms: "이용약관"
+        colors: ["금색 (Gold)", "심해색 (Deep Blue)", "숲의 녹색 (Forest Green)", "정열의 적색 (Crimson)"]
     },
     en: {
-        title: "Lotto Number Generator Pro",
-        subtitle: "Your lucky numbers are just a click away.",
-        generate: "Generate Numbers",
-        gauge: "Luck Potential:",
-        tipsTitle: "Lotto Winning Tips",
-        tips: [
-            "Analyze frequency of past winning numbers.",
-            "Avoid choosing only consecutive numbers.",
-            "Balance even and odd numbers for better odds.",
-            "Include your own special numbers."
+        heroTitle: "Reading the Flow of Destiny",
+        heroSubtitle: "Analyze the unique cosmic energy contained in your birth details.",
+        labelName: "Name",
+        labelDate: "Birth Date",
+        labelTime: "Birth Time",
+        btnAnalyze: "Analyze Destiny",
+        analyzing: "Harmonizing the Five Elements...",
+        labelLuckScore: "Destiny Index",
+        labelElements: "Element Balance",
+        labelTrend: "10-Year Big Luck Trend",
+        labelWisdom: "Daily Wisdom",
+        labelTreasures: "Lucky Treasures",
+        labelLotto: "Lucky Numbers",
+        labelColor: "Lucky Color",
+        btnReset: "Analyze Again",
+        elements: ["Wood", "Fire", "Earth", "Metal", "Water"],
+        animals: ["Rat", "Ox", "Tiger", "Rabbit", "Dragon", "Snake", "Horse", "Goat", "Monkey", "Rooster", "Dog", "Pig"],
+        luckDesc: ["Very Bright", "Stable", "Vibrant", "Calm"],
+        trends: [
+            "A period of strong wealth luck. Persistence will lead to significant achievements.",
+            "New connections will bring major changes. Focus on communication and collaboration.",
+            "A time for gaining wisdom and strengthening your inner self. Proceed slowly.",
+            "Your honor and status are on the rise. An opportunity to show your talents will arrive."
         ],
-        aboutTitle: "Why Lotto Pro?",
-        aboutText: "We provide a high-quality random number generation algorithm that ensures fair and truly random results.",
-        quotes: [
-            "Your fortune looks very bright today!",
-            "Small attempts lead to big luck.",
-            "May these numbers lead you to freedom.",
-            "Positive thoughts attract good luck.",
-            "You deserve a big win today."
+        wisdoms: [
+            "A day for listening rather than speaking. Pay attention to news from the West.",
+            "Break away from the familiar. You will find answers in unexpected places.",
+            "Patience is your best strategy today. A calm mind attracts good luck.",
+            "Offer a warm word to those around you. Kindness will return as a blessing."
         ],
-        fortuneLabels: {
-            overall: "Overall Luck",
-            wealth: "Wealth Energy",
-            direction: "Lucky Direction",
-            color: "Lucky Color"
-        },
-        directions: ["East", "West", "South", "North", "Northeast", "Southwest"],
-        colors: ["Gold", "Silver", "Red", "Blue", "Green", "Purple"],
-        analyzing: "Analyzing your luck...",
-        privacy: "Privacy Policy",
-        terms: "Terms of Service"
+        colors: ["Gold", "Deep Blue", "Forest Green", "Crimson"]
     }
 };
 
-class LottoBall extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
+class SajuEngine {
+    constructor(seed) {
+        this.seed = this.hashString(seed);
     }
 
-    connectedCallback() {
-        const number = this.getAttribute('number');
-        const delay = this.getAttribute('delay') || '0s';
-        const color = this.getColor(number);
-
-        this.shadowRoot.innerHTML = `
-            <style>
-                :host {
-                    display: block;
-                    width: 60px;
-                    height: 60px;
-                    opacity: 0;
-                    animation: dropIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-                    animation-delay: ${delay};
-                }
-                .ball {
-                    width: 60px;
-                    height: 60px;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 1.5rem;
-                    color: white;
-                    font-weight: bold;
-                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-                    background-color: ${color};
-                    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-                }
-                @keyframes dropIn {
-                    0% { transform: translateY(-50px) scale(0); opacity: 0; }
-                    60% { transform: translateY(10px) scale(1.1); }
-                    100% { transform: translateY(0) scale(1); opacity: 1; }
-                }
-            </style>
-            <div class="ball">${number}</div>
-        `;
+    hashString(str) {
+        let hash = 0;
+        for (let i = 0; i < str.length; i++) {
+            const char = str.charCodeAt(i);
+            hash = ((hash << 5) - hash) + char;
+            hash |= 0;
+        }
+        return Math.abs(hash);
     }
 
-    getColor(number) {
-        const value = parseInt(number);
-        if (value <= 10) return '#fbc400'; // Yellow
-        if (value <= 20) return '#69c8f2'; // Blue
-        if (value <= 30) return '#ff7272'; // Red
-        if (value <= 40) return '#aaa'; // Gray
-        return '#b0d840'; // Green
+    getAnalysis(lang) {
+        const t = translations[lang];
+        const elementIdx = this.seed % 5;
+        const animalIdx = this.seed % 12;
+        const luckIdx = this.seed % 4;
+        const trendIdx = (this.seed >> 2) % 4;
+        const wisdomIdx = (this.seed >> 4) % 4;
+        const colorIdx = (this.seed >> 6) % 4;
+
+        return {
+            element: t.elements[elementIdx],
+            elementKey: ['wood', 'fire', 'earth', 'metal', 'water'][elementIdx],
+            animal: t.animals[animalIdx],
+            luckScore: (this.seed % 25) + 75,
+            luckDesc: t.luckDesc[luckIdx],
+            trend: t.trends[trendIdx],
+            wisdom: t.wisdoms[wisdomIdx],
+            color: t.colors[colorIdx],
+            lotto: this.generateLotto(this.seed),
+            elementStats: this.generateElementStats(this.seed)
+        };
     }
-}
 
-customElements.define('lotto-ball', LottoBall);
-
-// DOM Elements
-const generateButton = document.getElementById('generate-button');
-const lottoNumbersContainer = document.getElementById('lotto-numbers');
-const themeToggle = document.getElementById('theme-toggle');
-const langToggle = document.getElementById('lang-toggle');
-const luckyQuote = document.getElementById('lucky-quote');
-const luckGaugeContainer = document.getElementById('luck-gauge-container');
-const gaugeFill = document.getElementById('gauge-fill');
-const body = document.body;
-
-// State
-let currentLang = localStorage.getItem('lang') || 'ko';
-
-// Update UI Text
-function updateLanguage() {
-    const t = translations[currentLang];
-    document.getElementById('main-title').textContent = t.title;
-    document.getElementById('sub-title').textContent = t.subtitle;
-    generateButton.textContent = t.generate;
-    document.getElementById('gauge-label').textContent = t.gauge;
-    document.getElementById('tips-title').textContent = t.tipsTitle;
-    document.getElementById('about-title').textContent = t.aboutTitle;
-    document.getElementById('about-text').textContent = t.aboutText;
-    document.getElementById('privacy-link').textContent = t.privacy;
-    document.getElementById('terms-link').textContent = t.terms;
-    
-    const tipsList = document.getElementById('tips-list');
-    tipsList.innerHTML = '';
-    t.tips.forEach(tip => {
-        const li = document.createElement('li');
-        li.textContent = tip;
-        tipsList.appendChild(li);
-    });
-
-    langToggle.textContent = currentLang === 'ko' ? 'EN' : 'KR';
-    document.documentElement.lang = currentLang;
-}
-
-// Initial Setup
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'dark') {
-    body.classList.add('dark-mode');
-    themeToggle.textContent = '🌙';
-}
-updateLanguage();
-
-// Events
-themeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    const isDark = body.classList.contains('dark-mode');
-    themeToggle.textContent = isDark ? '🌙' : '☀️';
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-});
-
-langToggle.addEventListener('click', () => {
-    currentLang = currentLang === 'ko' ? 'en' : 'ko';
-    localStorage.setItem('lang', currentLang);
-    updateLanguage();
-});
-
-function generateDetailedFortune() {
-    const t = translations[currentLang];
-    const detailsContainer = document.getElementById('fortune-details');
-    detailsContainer.innerHTML = '';
-
-    const categories = [
-        { label: t.fortuneLabels.overall, value: Math.floor(Math.random() * 20) + 80 + '%' },
-        { label: t.fortuneLabels.wealth, value: ['★ ★ ★ ★ ★', '★ ★ ★ ★', '★ ★ ★'][Math.floor(Math.random() * 3)] },
-        { label: t.fortuneLabels.direction, value: t.directions[Math.floor(Math.random() * t.directions.length)] },
-        { label: t.fortuneLabels.color, value: t.colors[Math.floor(Math.random() * t.colors.length)] }
-    ];
-
-    categories.forEach(cat => {
-        const item = document.createElement('div');
-        item.className = 'fortune-item';
-        item.innerHTML = `
-            <span class="label">${cat.label}</span>
-            <span class="value">${cat.value}</span>
-        `;
-        detailsContainer.appendChild(item);
-    });
-}
-
-generateButton.addEventListener('click', () => {
-    const t = translations[currentLang];
-    
-    // UI Reset & Analysis State
-    lottoNumbersContainer.innerHTML = '';
-    luckGaugeContainer.classList.add('hidden');
-    luckyQuote.innerHTML = `<span class="analyzing-text">${t.analyzing}</span>`;
-    luckyQuote.style.opacity = 1;
-    generateButton.disabled = true;
-
-    // Simulate analysis delay
-    setTimeout(() => {
-        generateButton.disabled = false;
-        luckGaugeContainer.classList.remove('hidden');
-        
+    generateLotto(seed) {
         const numbers = new Set();
+        let i = 0;
         while (numbers.size < 6) {
-            const randomNumber = Math.floor(Math.random() * 45) + 1;
-            numbers.add(randomNumber);
+            const n = ((seed >> i) % 45) + 1;
+            numbers.add(n);
+            i++;
+        }
+        return Array.from(numbers).sort((a, b) => a - b).join(', ');
+    }
+
+    generateElementStats(seed) {
+        const stats = [];
+        const keys = ['wood', 'fire', 'earth', 'metal', 'water'];
+        let total = 0;
+        for (let i = 0; i < 5; i++) {
+            const val = ((seed >> (i * 2)) % 50) + 10;
+            stats.push(val);
+            total += val;
+        }
+        return stats.map((v, i) => ({ key: keys[i], val: Math.round((v / total) * 100) }));
+    }
+}
+
+// UI Controller
+const UI = {
+    state: {
+        lang: localStorage.getItem('lang') || 'ko',
+        isDark: localStorage.getItem('theme') === 'dark'
+    },
+
+    elements: {
+        onboarding: document.getElementById('onboarding'),
+        analyzing: document.getElementById('analyzing'),
+        result: document.getElementById('result'),
+        analyzeBtn: document.getElementById('analyze-btn'),
+        resetBtn: document.getElementById('reset-btn'),
+        langToggle: document.getElementById('lang-toggle'),
+        themeToggle: document.getElementById('theme-toggle'),
+        inputs: {
+            name: document.getElementById('user-name'),
+            date: document.getElementById('birth-date'),
+            time: document.getElementById('birth-time')
+        }
+    },
+
+    init() {
+        this.updateTheme();
+        this.updateLang();
+        this.bindEvents();
+    },
+
+    bindEvents() {
+        this.elements.analyzeBtn.addEventListener('click', () => this.startAnalysis());
+        this.elements.resetBtn.addEventListener('click', () => this.reset());
+        this.elements.langToggle.addEventListener('click', () => this.toggleLang());
+        this.elements.themeToggle.addEventListener('click', () => this.toggleTheme());
+    },
+
+    updateLang() {
+        const t = translations[this.state.lang];
+        document.getElementById('hero-title').textContent = t.heroTitle;
+        document.getElementById('hero-subtitle').textContent = t.heroSubtitle;
+        document.getElementById('label-name').textContent = t.labelName;
+        document.getElementById('label-date').textContent = t.labelDate;
+        document.getElementById('label-time').textContent = t.labelTime;
+        this.elements.analyzeBtn.textContent = t.btnAnalyze;
+        document.getElementById('analysis-text').textContent = t.analyzing;
+        document.getElementById('label-luck-score').textContent = t.labelLuckScore;
+        document.getElementById('label-elements').textContent = t.labelElements;
+        document.getElementById('label-trend').textContent = t.labelTrend;
+        document.getElementById('label-wisdom').textContent = t.labelWisdom;
+        document.getElementById('label-treasures').textContent = t.labelTreasures;
+        document.getElementById('label-lotto').textContent = t.labelLotto;
+        document.getElementById('label-color').textContent = t.labelColor;
+        this.elements.resetBtn.textContent = t.btnReset;
+        this.elements.langToggle.textContent = this.state.lang === 'ko' ? 'EN' : 'KR';
+        document.documentElement.lang = this.state.lang;
+    },
+
+    toggleLang() {
+        this.state.lang = this.state.lang === 'ko' ? 'en' : 'ko';
+        localStorage.setItem('lang', this.state.lang);
+        this.updateLang();
+    },
+
+    updateTheme() {
+        if (this.state.isDark) {
+            document.body.classList.add('dark-mode');
+            this.elements.themeToggle.textContent = '🌙';
+        } else {
+            document.body.classList.remove('dark-mode');
+            this.elements.themeToggle.textContent = '☀️';
+        }
+    },
+
+    toggleTheme() {
+        this.state.isDark = !this.state.isDark;
+        localStorage.setItem('theme', this.state.isDark ? 'dark' : 'light');
+        this.updateTheme();
+    },
+
+    startAnalysis() {
+        const { name, date, time } = this.elements.inputs;
+        if (!name.value || !date.value) {
+            alert(this.state.lang === 'ko' ? "이름과 생년월일을 입력해주세요." : "Please enter your name and birth date.");
+            return;
         }
 
-        const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
+        this.elements.onboarding.classList.add('hidden');
+        this.elements.analyzing.classList.remove('hidden');
 
-        // Staggered display
-        sortedNumbers.forEach((number, index) => {
-            const lottoBall = document.createElement('lotto-ball');
-            lottoBall.setAttribute('number', number);
-            lottoBall.setAttribute('delay', `${index * 0.15}s`);
-            lottoNumbersContainer.appendChild(lottoBall);
+        const engine = new SajuEngine(name.value + date.value + time.value);
+        const result = engine.getAnalysis(this.state.lang);
+
+        setTimeout(() => {
+            this.showResult(result, name.value);
+        }, 2500);
+    },
+
+    showResult(data, userName) {
+        this.elements.analyzing.classList.add('hidden');
+        this.elements.result.classList.remove('hidden');
+
+        // Update DOM
+        const titleSuffix = this.state.lang === 'ko' ? "의 기운을 품은 " : " energy-imbued ";
+        document.getElementById('result-title').textContent = `${data.element}${titleSuffix}${data.animal}`;
+        
+        const nameSuffix = this.state.lang === 'ko' ? "님의 타고난 기질" : "'s innate nature";
+        document.getElementById('result-name-tag').textContent = `${userName}${nameSuffix}`;
+        
+        document.getElementById('result-luck-score').innerHTML = `${data.luckScore}<span>%</span>`;
+        document.getElementById('result-luck-desc').textContent = data.luckDesc;
+        document.getElementById('result-trend-text').textContent = data.trend;
+        document.getElementById('result-wisdom-text').textContent = data.wisdom;
+        document.getElementById('result-lotto').textContent = data.lotto;
+        document.getElementById('result-color').textContent = data.color;
+
+        // Elements Chart
+        const chart = document.getElementById('result-elements-chart');
+        chart.innerHTML = '';
+        const t = translations[this.state.lang];
+        data.elementStats.forEach((stat, i) => {
+            const group = document.createElement('div');
+            group.className = 'element-bar-group';
+            group.innerHTML = `
+                <span class="e-label">${t.elements[i].split(' ')[0]}</span>
+                <div class="e-track"><div class="e-fill" style="width: 0%; background: var(--color-${stat.key})"></div></div>
+                <span class="e-val">${stat.val}%</span>
+            `;
+            chart.appendChild(group);
+            setTimeout(() => {
+                group.querySelector('.e-fill').style.width = stat.val + '%';
+            }, 100 + (i * 100));
         });
 
-        // Lucky Quote
-        const quotes = t.quotes;
-        luckyQuote.textContent = quotes[Math.floor(Math.random() * quotes.length)];
-        
-        // Detailed Fortune
-        generateDetailedFortune();
+        // Animal Avatar SVG
+        document.getElementById('result-animal-icon').innerHTML = this.getAnimalSVG(data.animal);
+    },
 
-        // Luck Gauge
-        const luckValue = Math.floor(Math.random() * 30) + 70; // 70-100%
-        gaugeFill.style.width = '0%';
-        setTimeout(() => {
-            gaugeFill.style.width = `${luckValue}%`;
-        }, 100);
-    }, 1500);
-});
+    reset() {
+        this.elements.result.classList.add('hidden');
+        this.elements.onboarding.classList.remove('hidden');
+        this.elements.inputs.name.value = '';
+    },
+
+    getAnimalSVG(animal) {
+        // Simplified abstract animal icon representation using CSS shapes/Simple SVG
+        return `
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 8v4l3 3"></path>
+                <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-size="8" fill="currentColor" stroke="none" style="font-family:serif">★</text>
+            </svg>
+        `;
+    }
+};
+
+UI.init();
