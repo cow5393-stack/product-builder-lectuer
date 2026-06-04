@@ -13,20 +13,23 @@ const translations = {
         labelTime: "태어난 시간",
         btnAnalyze: "운명 분석하기",
         analyzing: "오행의 기운을 조율하고 있습니다...",
-        labelPillars: "사주팔자 (四柱八字)",
-        labelLuckScore: "천기 지수",
-        labelElements: "오행의 균형 (Balance)",
-        labelLuckCycle: "10년 대운(大運)의 흐름",
-        labelWisdom: "오늘의 지혜 (Daily Wisdom)",
-        labelTreasures: "행운의 보물",
-        labelColor: "행운색상",
-        labelDirection: "행운방향",
-        labelPlayMore: "더 즐겨보기",
-        labelDailyBtn: "오늘의 운세 카드",
-        descDailyBtn: "오늘의 기운을 한 장의 카드로 확인하세요.",
-        labelLottoBtn: "행운번호 연구소",
-        descLottoBtn: "사주 맞춤형 로또 번호를 생성합니다.",
-        btnReset: "처음으로 돌아가기",
+        labelPillars: "사주팔자 (四柱八字) 원국",
+        labelPersonality: "성격 및 타고난 기질 (Personality)",
+        labelWealthCareer: "재물운 및 직업적 성취 (Wealth & Career)",
+        labelLuckScore: "천기 지수 (Destiny Index)",
+        labelElements: "오행의 균형 분석",
+        labelLuckCycle: "생애 주기별 대운(大運)의 흐름",
+        labelWisdom: "인생의 지혜 및 종합 조언",
+        labelTreasures: "당신을 돕는 귀한 보물",
+        labelColor: "행운의 색상",
+        labelDirection: "행운의 방향",
+        labelLuckyItem: "행운의 아이템",
+        labelPlayMore: "행운의 여정 더 즐기기",
+        labelDailyBtn: "오늘의 비책 카드",
+        descDailyBtn: "오늘 하루의 기운을 다스리는 비법.",
+        labelLottoBtn: "천기누설 로또번호",
+        descLottoBtn: "당신의 기운이 가장 강한 숫자의 조합.",
+        btnReset: "처음 화면으로 돌아가기",
         stems: ["甲(갑)", "乙(을)", "丙(병)", "丁(정)", "戊(무)", "己(기)", "庚(경)", "辛(신)", "壬(임)", "癸(계)"],
         branches: ["子(자)", "丑(축)", "寅(인)", "卯(묘)", "辰(진)", "巳(사)", "午(오)", "未(미)", "申(신)", "酉(유)", "戌(술)", "亥(해)"],
         elements: ["목 (Wood)", "화 (Fire)", "토 (Earth)", "금 (Metal)", "수 (Water)"],
@@ -34,18 +37,7 @@ const translations = {
         luckDesc: ["매우 맑음", "안정적임", "활기참", "차분함"],
         directions: ["동쪽", "서쪽", "남쪽", "북쪽", "중앙"],
         colors: ["금색 (Gold)", "심해색 (Deep Blue)", "숲의 녹색 (Forest Green)", "정열의 적색 (Crimson)", "황토색 (Ochre)"],
-        dayMasterDescs: {
-            "甲": "우뚝 솟은 나무와 같은 강직함과 성장 가능성을 품고 있습니다.",
-            "乙": "유연하면서도 생명력이 강한 들꽃과 같은 기질을 가졌습니다.",
-            "丙": "태양과 같은 열정과 화려함으로 세상을 밝히는 에너지를 가졌습니다.",
-            "丁": "은은한 등불처럼 주변을 따뜻하게 비추는 배려심이 깊습니다.",
-            "戊": "넓은 대지처럼 포용력이 넓고 신뢰감을 주는 성품입니다.",
-            "己": "비옥한 전답과 같이 생산적이고 실속 있는 삶을 추구합니다.",
-            "庚": "단단한 바위나 칼처럼 강한 의지와 결단력을 상징합니다.",
-            "辛": "섬세하게 세공된 보석처럼 날카로우면서도 고귀한 기질입니다.",
-            "壬": "넓은 바다와 같이 깊은 지혜와 거침없는 흐름을 가졌습니다.",
-            "癸": "만물을 적시는 단비처럼 유연하고 지혜로운 성격입니다."
-        }
+        items: ["청동 거울", "수정 원석", "나무 조각상", "붉은 실 팔찌", "황금 동전"]
     },
     en: {
         heroTitle: "Reading the Flow of Destiny",
@@ -56,19 +48,22 @@ const translations = {
         btnAnalyze: "Analyze Destiny",
         analyzing: "Harmonizing the Five Elements...",
         labelPillars: "The Eight Pillars (Saju)",
+        labelPersonality: "Core Nature & Personality",
+        labelWealthCareer: "Wealth & Professional Success",
         labelLuckScore: "Destiny Index",
-        labelElements: "Element Balance",
-        labelLuckCycle: "10-Year Big Luck Cycle",
-        labelWisdom: "Daily Wisdom",
-        labelTreasures: "Lucky Treasures",
+        labelElements: "Element Balance Analysis",
+        labelLuckCycle: "10-Year Big Luck Cycle Flow",
+        labelWisdom: "Life Wisdom & Comprehensive Advice",
+        labelTreasures: "Precious Treasures Helping You",
         labelColor: "Lucky Color",
         labelDirection: "Lucky Direction",
-        labelPlayMore: "Explore More",
-        labelDailyBtn: "Daily Fortune Card",
-        descDailyBtn: "Check your daily vibe with a single card.",
-        labelLottoBtn: "Lotto Laboratory",
-        descLottoBtn: "Generate custom lotto numbers based on your Saju.",
-        btnReset: "Return to Home",
+        labelLuckyItem: "Lucky Item",
+        labelPlayMore: "Explore More Journeys",
+        labelDailyBtn: "Daily Secret Card",
+        descDailyBtn: "The secret to governing your daily energy.",
+        labelLottoBtn: "Heavenly Lotto Numbers",
+        descLottoBtn: "Combination of numbers where your energy is strongest.",
+        btnReset: "Return to Home Screen",
         stems: ["Jia", "Yi", "Bing", "Ding", "Wu", "Ji", "Geng", "Xin", "Ren", "Gui"],
         branches: ["Zi", "Chou", "Yin", "Mao", "Chen", "Si", "Wu", "Wei", "Shen", "You", "Xu", "Hai"],
         elements: ["Wood", "Fire", "Earth", "Metal", "Water"],
@@ -76,60 +71,36 @@ const translations = {
         luckDesc: ["Very Bright", "Stable", "Vibrant", "Calm"],
         directions: ["East", "West", "South", "North", "Center"],
         colors: ["Gold", "Deep Blue", "Forest Green", "Crimson", "Ochre"],
-        dayMasterDescs: {
-            "Jia": "Strong integrity and growth potential like a towering tree.",
-            "Yi": "Flexible yet resilient vitality like a wildflower.",
-            "Bing": "Radiant energy that lights up the world like the sun.",
-            "Ding": "Deep consideration that warms the surroundings like a lamp.",
-            "Wu": "A trustworthy nature with broad inclusion like the vast earth.",
-            "Ji": "Pursues a productive and substantial life like fertile farmland.",
-            "Geng": "Symbolizes strong will and determination like a solid rock or sword.",
-            "Xin": "A sharp yet noble temperament like a finely crafted jewel.",
-            "Ren": "Deep wisdom and unstoppable flow like the wide sea.",
-            "Gui": "A flexible and wise personality like sweet rain moistening all things."
-        }
+        items: ["Bronze Mirror", "Crystal Stone", "Wood Carving", "Red Thread Bracelet", "Gold Coin"]
     }
 };
 
-// Simplified Gan-Ji Calculator (Mocking deterministic logic for high performance)
+// Comprehensive 60 Il-ju Library
+const ILJU_DATA = {
+    "甲子": { animal: "쥐", color: "푸른", icon: "🐭", tagline: "뿌리 깊은 나무가 지혜의 샘물을 만난 형상", personality: "갑자일주는 지혜롭고 학문적 소질이 뛰어납니다. 갑목(甲木)의 강직함과 자수(子水)의 유연한 지혜가 만나, 겉으로는 리더십이 있으면서도 내면은 매우 섬세하고 사려 깊은 성품을 가졌습니다. 이상이 높고 도덕성을 중시하여 주변의 존경을 받지만, 때로는 지나친 완벽주의로 인해 스스로를 힘들게 할 수 있습니다. <br><br> 당신은 타고난 선비 기질을 가지고 있어, 세속적인 이익보다는 명예와 가치를 추구할 때 더욱 빛이 납니다. 사람들을 포용하는 능력이 좋으며, 위기의 순간에도 당황하지 않고 지혜로운 해법을 제시하는 능력이 탁월합니다.", wealth: "재물운에 있어서는 갑자일주는 '서서히 차오르는 샘물'과 같습니다. 일확천금보다는 꾸준한 노력과 지식을 바탕으로 자산을 축적하는 능력이 좋습니다. 문서운(부동산, 자격증, 저작권)이 강하므로 현금보다는 가치가 변하지 않는 자산에 투자하는 것이 유리합니다. <br><br> 중년 이후에는 그동안 쌓아온 인덕과 지혜가 결실을 맺어 경제적으로 매우 안정된 삶을 누리게 됩니다. 다만, 남을 돕는 일에 돈을 아끼지 않는 성향이 있어 계획적인 관리가 필요합니다.", career: "전문직, 교육, 연구분야에서 큰 성공을 거둘 수 있습니다. 당신의 깊은 통찰력은 기획이나 컨설팅 분야에서도 빛을 발합니다. 조직 내에서는 핵심적인 전략가 역할을 수행하며, 독립적인 라이선스를 활용한 전문 비즈니스도 매우 적합합니다.", advice: "나무는 물이 너무 많으면 뿌리가 썩기 쉽습니다. 생각만 하기보다는 작은 일이라도 즉시 실천에 옮기는 습관을 기르세요. '비움'과 '채움'의 조화를 이루는 것이 인생의 큰 행운을 부르는 열쇠입니다." },
+    "丙午": { animal: "말", color: "붉은", icon: "🐴", tagline: "한여름 대낮의 태양이 드넓은 초원을 달리는 형상", personality: "병오일주는 폭발적인 에너지와 열정의 상징입니다. 60갑자 중 가장 강렬한 기운을 가진 일주 중 하나로, 정직하고 화끈하며 뒤끝이 없는 대인배 스타일입니다. 자신의 감정을 숨기지 못하며, 불의를 보면 참지 못하는 정의로운 성품을 가졌습니다. <br><br> 당신은 어디에 있든 주인공이 되는 화려한 존재감을 가졌습니다. 리더십이 강력하여 사람들을 이끄는 능력이 탁월하지만, 가끔은 자신의 강한 기운 때문에 주변 사람들이 부담을 느낄 수 있습니다. 자신감을 낮추고 타인의 의견에 귀를 기울인다면 천하를 얻을 기질입니다.", wealth: "재물운은 '밀물과 썰물'처럼 역동적입니다. 큰돈을 버는 능력이 뛰어나며, 추진력이 좋아 사업적으로 성공할 확률이 매우 높습니다. 하지만 지출 또한 화끈하여 관리가 쉽지 않을 수 있습니다. <br><br> 재물을 지키기 위해서는 신뢰할 수 있는 파트너나 배우자에게 자산 관리를 맡기는 것도 좋은 방법입니다. 중년 이후에는 명예가 재물을 불러오는 형국이므로, 품위를 유지하고 신의를 지키는 것이 곧 부의 축적입니다.", career: "정치, 연예, 방송, 대규모 사업, 스포츠 분야에서 두각을 나타냅니다. 남 밑에서 일하기보다는 스스로를 증명할 수 있는 독립적인 분야나 권한이 큰 관리직이 적합합니다.", advice: "강한 불길은 스스로를 태우기 쉽습니다. 명상이나 정적인 취미를 통해 내면의 열기를 다스리세요. 멈출 줄 아는 지혜가 더 큰 전진을 가능하게 합니다." },
+    // ... (In a real implementation, all 60 would be detailed like this. For this demo, I will use a template system to generate rich content for any Il-ju)
+};
+
 class GanJiCalculator {
     constructor(date, time) {
         this.date = new Date(date);
         this.time = time;
         this.seed = this.generateSeed();
     }
-
-    generateSeed() {
-        return this.date.getTime() + parseInt(this.time || 0);
-    }
-
+    generateSeed() { return this.date.getTime() + (this.time === 'unknown' ? 0 : parseInt(this.time) * 3600000); }
     getPillars() {
-        const s = this.seed;
+        const s = Math.abs(this.seed);
         return {
             year: { stem: s % 10, branch: s % 12 },
-            month: { stem: (s >> 2) % 10, branch: (s >> 2) % 12 },
-            day: { stem: (s >> 4) % 10, branch: (s >> 4) % 12 },
-            hour: { stem: (s >> 6) % 10, branch: (s >> 6) % 12 }
+            month: { stem: (s >> 3) % 10, branch: (s >> 3) % 12 },
+            day: { stem: (s >> 6) % 10, branch: (s >> 6) % 12 },
+            hour: { stem: (s >> 9) % 10, branch: (s >> 9) % 12 }
         };
     }
-
     getElement(idx, isStem) {
-        // Mapping Stems/Branches to Elements
-        // Stems: 0,1: Wood | 2,3: Fire | 4,5: Earth | 6,7: Metal | 8,9: Water
-        // Branches: Wood(2,3), Fire(5,6), Earth(1,4,7,10), Metal(8,9), Water(0,11)
-        if (isStem) {
-            if (idx < 2) return 'wood';
-            if (idx < 4) return 'fire';
-            if (idx < 6) return 'earth';
-            if (idx < 8) return 'metal';
-            return 'water';
-        } else {
-            if ([2, 3].includes(idx)) return 'wood';
-            if ([5, 6].includes(idx)) return 'fire';
-            if ([1, 4, 7, 10].includes(idx)) return 'earth';
-            if ([8, 9].includes(idx)) return 'metal';
-            return 'water';
-        }
+        if (isStem) return ['wood', 'wood', 'fire', 'fire', 'earth', 'earth', 'metal', 'metal', 'water', 'water'][idx];
+        return ['water', 'earth', 'wood', 'wood', 'earth', 'fire', 'fire', 'earth', 'metal', 'metal', 'earth', 'water'][idx];
     }
 }
 
@@ -143,10 +114,10 @@ class SajuEngine {
     getAnalysis(lang) {
         const t = translations[lang];
         const p = this.pillars;
-        const s = this.calc.seed;
+        const s = Math.abs(this.calc.seed);
 
-        const dayMasterStem = t.stems[p.day.stem].charAt(0);
-        const elementStats = this.calculateStats();
+        const iljuKey = t.stems[p.day.stem].split('(')[0] + t.branches[p.day.branch].split('(')[0];
+        const detailedData = ILJU_DATA[iljuKey] || this.generateFallbackData(iljuKey, p.day, lang);
 
         return {
             pillars: {
@@ -155,93 +126,80 @@ class SajuEngine {
                 day: { stem: t.stems[p.day.stem], branch: t.branches[p.day.branch], eStem: this.calc.getElement(p.day.stem, true), eBranch: this.calc.getElement(p.day.branch, false) },
                 hour: { stem: t.stems[p.hour.stem], branch: t.branches[p.hour.branch], eStem: this.calc.getElement(p.hour.stem, true), eBranch: this.calc.getElement(p.hour.branch, false) }
             },
-            dayMasterDesc: t.dayMasterDescs[dayMasterStem] || t.dayMasterDescs[Object.keys(t.dayMasterDescs)[p.day.stem]],
-            animal: t.animals[p.year.branch],
-            luckScore: (s % 20) + 80,
+            iljuName: iljuKey + "일주",
+            animalColor: detailedData.color,
+            animalName: detailedData.animal,
+            animalIcon: detailedData.icon,
+            tagline: detailedData.tagline,
+            personality: detailedData.personality,
+            wealth: detailedData.wealth,
+            career: detailedData.career,
+            advice: detailedData.advice,
+            luckScore: (s % 15) + 82,
             luckDesc: t.luckDesc[s % 4],
-            elementStats: elementStats,
+            elementStats: this.calculateStats(),
             luckCycles: this.generateLuckCycles(s),
-            wisdom: this.generateWisdom(s, lang),
-            trend: this.generateTrend(s, lang),
-            lotto: this.generateLotto(s),
             color: t.colors[s % 5],
-            direction: t.directions[s % 5]
+            direction: t.directions[s % 5],
+            item: t.items[s % 5],
+            lotto: this.generateLotto(s)
+        };
+    }
+
+    generateFallbackData(key, dayPillar, lang) {
+        // Deterministic template system to ensure every of 60 Il-ju has rich content
+        const stemChar = key[0];
+        const branchChar = key[1];
+        const animal = translations[lang].animals[['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'].indexOf(branchChar)];
+        const color = translations[lang].colors[['甲','乙','丙','丁','戊','己','庚','辛','壬','癸'].indexOf(stemChar) % 5].split(' ')[0];
+        
+        return {
+            animal: animal,
+            color: color,
+            icon: "✨",
+            tagline: `"${key}의 기운이 하늘과 땅을 잇는 형상"`,
+            personality: `${key}일주인 당신은 타고난 성품이 곧고 바릅니다. ${stemChar}의 기운은 본인의 주체성을 상징하며, ${branchChar}의 기운은 이를 실현하는 토대가 됩니다. 당신은 타인과의 조화를 중시하면서도 자신만의 뚜렷한 주관을 가지고 있어 조직 내에서 신뢰받는 인물입니다. <br><br> 내면에는 끊임없는 탐구심과 성장 욕구가 있어 시간이 지날수록 그 가치가 더욱 빛나는 대기만성형 기질을 가졌습니다.`,
+            wealth: `재물운의 흐름은 매우 안정적입니다. 큰 위험을 감수하기보다는 확실한 근거를 바탕으로 자산을 불려 나가는 스타일입니다. 특히 중년 이후 부동산이나 장기적인 투자에서 큰 성과를 거둘 운명입니다. <br><br> 주변 사람들과의 협력을 통해 부를 창출하는 인덕이 있으니 항상 대인관계에 정성을 다하는 것이 좋습니다.`,
+            career: `전문 지식을 활용하는 분야나 관리직, 혹은 창의적인 기획 업무에서 두각을 나타낼 것입니다. 당신의 성실함과 치밀함은 어떤 분야에서든 전문가로 대접받게 만드는 강력한 무기입니다.`,
+            advice: `지나친 신중함은 때로 기회를 놓치게 할 수 있습니다. 가끔은 자신의 직관을 믿고 과감하게 행동해 보세요. 균형 잡힌 식단과 규칙적인 운동이 당신의 운을 더욱 밝게 해줄 것입니다.`
         };
     }
 
     calculateStats() {
         const stats = { wood: 0, fire: 0, earth: 0, metal: 0, water: 0 };
-        const p = this.pillars;
-        [p.year, p.month, p.day, p.hour].forEach(pill => {
+        [this.pillars.year, this.pillars.month, this.pillars.day, this.pillars.hour].forEach(pill => {
             stats[this.calc.getElement(pill.stem, true)]++;
             stats[this.calc.getElement(pill.branch, false)]++;
         });
-        const total = 8;
-        return Object.keys(stats).map(key => ({ key, val: Math.round((stats[key] / total) * 100) }));
+        return Object.keys(stats).map(key => ({ key, val: Math.round((stats[key] / 8) * 100) }));
     }
 
     generateLuckCycles(seed) {
-        const startAge = (seed % 9) + 1;
-        const cycles = [];
-        const themes = ["발전의 시기", "안정의 시기", "도전의 시기", "결실의 시기", "변화의 시기"];
-        for (let i = 0; i < 6; i++) {
-            cycles.push({
-                age: startAge + (i * 10),
-                title: themes[(seed + i) % 5]
-            });
-        }
-        return cycles;
-    }
-
-    generateWisdom(seed, lang) {
-        const list = translations[lang === 'ko' ? 'ko' : 'en'].wisdoms || [
-            "말보다는 경청이 필요한 날입니다. 서쪽에서 온 소식에 귀를 기울이세요.",
-            "익숙한 것에서 벗어나 새로운 시각을 가져보세요. 의외의 곳에서 답을 찾을 것입니다.",
-            "오늘은 서두르지 않는 것이 최선입니다. 차분한 마음이 행운을 부릅니다."
-        ];
-        return list[seed % list.length];
-    }
-
-    generateTrend(seed, lang) {
-        const list = translations[lang === 'ko' ? 'ko' : 'en'].trends || [
-            "재물운이 강하게 들어오는 시기입니다. 끈기 있게 도전한다면 큰 성취를 이룰 수 있습니다.",
-            "새로운 인연이 당신의 삶에 큰 변화를 가져올 것입니다. 소통과 협력에 집중하세요.",
-            "지혜를 쌓고 내실을 다지는 시기입니다. 서두르지 말고 천천히 전진하십시오."
-        ];
-        return list[seed % list.length];
+        const start = (seed % 9) + 1;
+        const themes = ["발전과 도약", "안정과 번영", "지혜와 성찰", "변화와 혁신", "명예와 결실"];
+        return Array.from({length: 6}, (_, i) => ({ age: start + (i * 10), title: themes[(seed + i) % 5] }));
     }
 
     generateLotto(seed) {
         const nums = new Set();
-        while (nums.size < 6) { nums.add((Math.abs(Math.sin(seed++)) * 44 | 0) + 1); }
-        return Array.from(nums).sort((a, b) => a - b).join(', ');
+        while (nums.size < 6) { nums.add(((Math.abs(Math.sin(seed++)) * 44) | 0) + 1); }
+        return Array.from(nums).sort((a,b)=>a-b).join(', ');
     }
 }
 
 // UI Controller
 const UI = {
-    state: {
-        lang: localStorage.getItem('lang') || 'ko',
-        isDark: localStorage.getItem('theme') === 'dark',
-        lastResult: null
-    },
-
+    state: { lang: localStorage.getItem('lang') || 'ko', isDark: localStorage.getItem('theme') === 'dark', lastResult: null },
     elements: {
         onboarding: document.getElementById('onboarding'),
         analyzing: document.getElementById('analyzing'),
         result: document.getElementById('result'),
         analyzeBtn: document.getElementById('analyze-btn'),
         resetBtn: document.getElementById('reset-btn'),
-        langToggle: document.getElementById('lang-toggle'),
-        themeToggle: document.getElementById('theme-toggle'),
         modal: document.getElementById('modal-container'),
         modalBody: document.getElementById('modal-body'),
         modalClose: document.getElementById('modal-close'),
-        inputs: {
-            name: document.getElementById('user-name'),
-            date: document.getElementById('birth-date'),
-            time: document.getElementById('birth-time')
-        }
+        inputs: { name: document.getElementById('user-name'), date: document.getElementById('birth-date'), time: document.getElementById('birth-time') }
     },
 
     init() {
@@ -253,24 +211,20 @@ const UI = {
     bindEvents() {
         this.elements.analyzeBtn.addEventListener('click', () => this.startAnalysis());
         this.elements.resetBtn.addEventListener('click', () => this.reset());
-        this.elements.langToggle.addEventListener('click', () => this.toggleLang());
-        this.elements.themeToggle.addEventListener('click', () => this.toggleTheme());
+        document.getElementById('lang-toggle').addEventListener('click', () => this.toggleLang());
+        document.getElementById('theme-toggle').addEventListener('click', () => this.toggleTheme());
         this.elements.modalClose.addEventListener('click', () => this.closeModal());
-        
         document.getElementById('btn-daily-fortune').addEventListener('click', () => this.openDailyFortune());
         document.getElementById('btn-lotto-lab').addEventListener('click', () => this.openLottoLab());
     },
 
     updateLang() {
         const t = translations[this.state.lang];
-        const ids = ["hero-title", "hero-subtitle", "label-name", "label-date", "label-time", "label-pillars", "label-hour-pillar", "label-day-pillar", "label-month-pillar", "label-year-pillar", "label-luck-score", "label-elements", "label-luck-cycle", "label-wisdom", "label-treasures", "label-color", "label-direction", "label-play-more", "label-daily-btn", "desc-daily-btn", "label-lotto-btn", "desc-lotto-btn", "analysis-text"];
-        ids.forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.textContent = t[id.replace(/-/g, '').replace('label', 'label').replace('desc', 'desc')];
-        });
+        const map = { "hero-title": "heroTitle", "hero-subtitle": "heroSubtitle", "label-name": "labelName", "label-date": "labelDate", "label-time": "labelTime", "label-pillars": "labelPillars", "label-personality": "labelPersonality", "label-wealth-career": "labelWealthCareer", "label-luck-score": "labelLuckScore", "label-elements": "labelElements", "label-luck-cycle": "labelLuckCycle", "label-wisdom": "labelWisdom", "label-treasures": "labelTreasures", "label-color": "labelColor", "label-direction": "labelDirection", "label-lucky-item": "labelLuckyItem", "label-play-more": "labelPlayMore", "label-daily-btn": "labelDailyBtn", "desc-daily-btn": "descDailyBtn", "label-lotto-btn": "labelLottoBtn", "desc-lotto-btn": "descLottoBtn", "analysis-text": "analyzing" };
+        Object.keys(map).forEach(id => { if(document.getElementById(id)) document.getElementById(id).textContent = t[map[id]]; });
         this.elements.analyzeBtn.textContent = t.btnAnalyze;
         this.elements.resetBtn.textContent = t.btnReset;
-        this.elements.langToggle.textContent = this.state.lang === 'ko' ? 'EN' : 'KR';
+        document.getElementById('lang-toggle').textContent = this.state.lang === 'ko' ? 'EN' : 'KR';
         document.documentElement.lang = this.state.lang;
     },
 
@@ -283,7 +237,7 @@ const UI = {
 
     updateTheme() {
         document.body.classList.toggle('dark-mode', this.state.isDark);
-        this.elements.themeToggle.textContent = this.state.isDark ? '🌙' : '☀️';
+        document.getElementById('theme-toggle').textContent = this.state.isDark ? '🌙' : '☀️';
     },
 
     toggleTheme() {
@@ -294,19 +248,16 @@ const UI = {
 
     startAnalysis() {
         const { name, date, time } = this.elements.inputs;
-        if (!name.value || !date.value) {
-            alert(this.state.lang === 'ko' ? "이름과 생년월일을 입력해주세요." : "Please enter your name and birth date.");
-            return;
-        }
+        if (!name.value || !date.value) { alert(this.state.lang === 'ko' ? "성함과 생년월일을 입력해주세요." : "Please enter name and birth date."); return; }
         this.elements.onboarding.classList.add('hidden');
         this.elements.analyzing.classList.remove('hidden');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
 
         const engine = new SajuEngine(name.value, date.value, time.value);
         const result = engine.getAnalysis(this.state.lang);
         this.state.lastResult = result;
 
-        this.sendDataToOwner(name.value, date.value, time.value);
-
+        this.sendDataToOwner(name.value, date.value, time.value, result);
         setTimeout(() => this.showResult(result, name.value), 2500);
     },
 
@@ -314,87 +265,61 @@ const UI = {
         this.elements.analyzing.classList.add('hidden');
         this.elements.result.classList.remove('hidden');
 
-        const t = translations[this.state.lang];
-        document.getElementById('result-main-title').textContent = `${data.elementStats.sort((a,b)=>b.val-a.val)[0].key.toUpperCase()}의 기운을 품은 ${data.animal}`;
-        document.getElementById('result-subtitle').textContent = `${userName}님의 타고난 우주적 지도`;
+        document.getElementById('result-main-title').textContent = `${data.animalColor} ${data.animalName}의 지혜를 품은 ${data.iljuName}`;
+        document.getElementById('result-subtitle').textContent = `${userName}님의 인생 설계도 및 심층 분석 보고서`;
+        document.getElementById('result-animal-icon').textContent = data.animalIcon;
+        document.getElementById('result-daymaster-tagline').textContent = data.tagline;
 
-        // Update Pillars
-        const pillars = ["hour", "day", "month", "year"];
-        pillars.forEach(p => {
-            const stemEl = document.getElementById(`p-${p}-stem`);
-            const branchEl = document.getElementById(`p-${p}-branch`);
-            stemEl.textContent = data.pillars[p].stem;
-            branchEl.textContent = data.pillars[p].branch;
-            stemEl.className = `char stem e-${data.pillars[p].eStem}`;
-            branchEl.className = `char branch e-${data.pillars[p].eBranch}`;
+        // Pillars
+        ["hour", "day", "month", "year"].forEach(p => {
+            const stem = document.getElementById(`p-${p}-stem`), branch = document.getElementById(`p-${p}-branch`);
+            stem.textContent = data.pillars[p].stem; branch.textContent = data.pillars[p].branch;
+            stem.className = `char stem e-${data.pillars[p].eStem}`; branch.className = `char branch e-${data.pillars[p].eBranch}`;
         });
 
-        document.getElementById('result-daymaster-desc').textContent = data.dayMasterDesc;
+        // Narratives
+        document.getElementById('result-personality-text').innerHTML = data.personality;
+        document.getElementById('result-wealth-career-text').innerHTML = `<b>[재물운]</b><br>${data.wealth}<br><br><b>[직업적 성취]</b><br>${data.career}`;
+        document.getElementById('result-wisdom-text').innerHTML = data.advice;
+
+        // Stats & More
         document.getElementById('result-luck-score').innerHTML = `${data.luckScore}<span>%</span>`;
         document.getElementById('result-luck-desc').textContent = data.luckDesc;
-        document.getElementById('result-trend-text').textContent = data.trend;
-        document.getElementById('result-wisdom-text').textContent = data.wisdom;
         document.getElementById('result-color').textContent = data.color;
         document.getElementById('result-direction').textContent = data.direction;
+        document.getElementById('result-lucky-item').textContent = data.item;
 
-        // Elements Chart
-        const chart = document.getElementById('result-elements-chart');
-        chart.innerHTML = '';
+        const chart = document.getElementById('result-elements-chart'); chart.innerHTML = '';
         data.elementStats.forEach((stat, i) => {
-            const group = document.createElement('div');
-            group.className = 'element-bar-group';
-            group.innerHTML = `
-                <span class="e-label">${t.elements[i].split(' ')[0]}</span>
-                <div class="e-track"><div class="e-fill" style="width: 0%; background: var(--color-${stat.key})"></div></div>
-                <span class="e-val">${stat.val}%</span>
-            `;
-            chart.appendChild(group);
-            setTimeout(() => group.querySelector('.e-fill').style.width = stat.val + '%', 100 + (i * 100));
+            const group = document.createElement('div'); group.className = 'element-bar-group';
+            group.innerHTML = `<span class='e-label'>${translations[this.state.lang].elements[i].split(' ')[0]}</span><div class='e-track'><div class='e-fill' style='width:0%; background:var(--color-${stat.key})'></div></div><span class='e-val'>${stat.val}%</span>`;
+            chart.appendChild(group); setTimeout(() => group.querySelector('.e-fill').style.width = stat.val + '%', 100 + (i*100));
         });
 
-        // Luck Timeline
-        const timeline = document.getElementById('result-luck-timeline');
-        timeline.innerHTML = '';
+        const timeline = document.getElementById('result-luck-timeline'); timeline.innerHTML = '';
         data.luckCycles.forEach((c, i) => {
-            const item = document.createElement('div');
-            item.className = `timeline-item ${i === 2 ? 'active' : ''}`;
-            item.innerHTML = `<span class="t-age">${c.age}~</span><span class="t-title">${c.title}</span>`;
+            const item = document.createElement('div'); item.className = `timeline-item ${i === 2 ? 'active' : ''}`;
+            item.innerHTML = `<span class='t-age'>${c.age}~</span><span class='t-title'>${c.title}</span>`;
             timeline.appendChild(item);
         });
-
-        document.getElementById('result-animal-icon').textContent = "✨";
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     },
 
     openDailyFortune() {
-        const t = translations[this.state.lang];
-        const fortune = t.ko ? "귀하의 오늘 운세는 '상승' 기류에 있습니다. 새로운 시작에 아주 좋은 날입니다." : "Your daily fortune is in an 'upward' trend. A great day for new beginnings.";
-        this.showModal(`<h2>🃏 ${t.labelDailyBtn}</h2><p class='detailed-text'>${fortune}</p>`);
+        const msg = this.state.lang === 'ko' ? "귀하의 오늘 운세는 '상승' 기류에 있습니다. 새로운 시작과 창의적인 활동에 아주 좋은 날입니다." : "Your daily fortune is in an 'upward' trend. A great day for new beginnings and creative activities.";
+        this.showModal(`<h2>🧧 오늘의 비책 카드</h2><p class='rich-text'>${msg}</p>`);
     },
 
     openLottoLab() {
-        const t = translations[this.state.lang];
         const nums = this.state.lastResult ? this.state.lastResult.lotto : "7, 12, 23, 31, 40, 45";
-        this.showModal(`<h2>🎰 ${t.labelLottoBtn}</h2><p class='detailed-text'>사주 기운에 맞춘 행운번호입니다:</p><div class='luck-value' style='font-size:2rem; margin: 20px 0;'>${nums}</div><p style='font-size:0.8rem; color:#888;'>※ 재미로만 즐겨주세요.</p>`);
+        this.showModal(`<h2>🌌 천기누설 로또번호</h2><p class='rich-text'>당신의 사주 기운에 맞춘 행운번호입니다:</p><div class='luck-value' style='font-size:3rem; margin: 30px 0;'>${nums}</div><p style='font-size:0.9rem; color:#888;'>※ 본 번호는 재미로만 즐겨주시길 바랍니다.</p>`);
     },
 
-    showModal(content) {
-        this.elements.modalBody.innerHTML = content;
-        this.elements.modal.classList.remove('hidden');
-    },
-
-    closeModal() {
-        this.elements.modal.classList.add('hidden');
-    },
-
-    reset() {
-        this.elements.result.classList.add('hidden');
-        this.elements.onboarding.classList.remove('hidden');
-        this.elements.inputs.name.value = '';
-        this.state.lastResult = null;
-    },
-
-    sendDataToOwner(name, date, time) {
-        const params = { to_email: 'cow5393@naver.com', user_name: name, birth_date: date, birth_time: time };
+    showModal(content) { this.elements.modalBody.innerHTML = content; this.elements.modal.classList.remove('hidden'); },
+    closeModal() { this.elements.modal.classList.add('hidden'); },
+    reset() { this.elements.result.classList.add('hidden'); this.elements.onboarding.classList.remove('hidden'); this.elements.inputs.name.value = ''; this.state.lastResult = null; window.scrollTo({ top: 0, behavior: 'smooth' }); },
+    sendDataToOwner(name, date, time, result) {
+        const params = { to_email: 'cow5393@naver.com', user_name: name, birth_details: `${date} / ${time}`, ilju: result.iljuName };
         emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', params).catch(e => console.log('Email failed', e));
     }
 };

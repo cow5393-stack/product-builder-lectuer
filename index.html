@@ -80,94 +80,112 @@
             <p id="analysis-text" class="analyzing-status">오행의 기운을 조율하고 있습니다...</p>
         </section>
 
-        <!-- Step 3: Result (Professional Version) -->
+        <!-- Step 3: Result (Ultimate Version) -->
         <section id="result" class="result-section hidden">
-            <!-- Header Summary -->
+            <!-- Professional Header -->
             <div class="result-header">
-                <div class="animal-badge" id="result-animal-icon"></div>
-                <h2 id="result-main-title">금의 기운을 품은 영리한 원숭이</h2>
-                <p id="result-subtitle">홍길동님의 타고난 우주적 지도</p>
+                <div class="animal-badge-large" id="result-animal-icon"></div>
+                <h2 id="result-main-title">푸른 쥐의 지혜를 품은 갑자일주</h2>
+                <p id="result-subtitle">홍길동님의 인생 설계도 및 심층 분석 보고서</p>
             </div>
 
             <!-- Bento Grid -->
             <div class="bento-grid">
                 <!-- Saju Pillars Grid -->
                 <div class="bento-item pillars-card span-full">
-                    <h3 id="label-pillars">사주팔자 (四柱八字)</h3>
+                    <h3 id="label-pillars">사주팔자 (四柱八字) 원국</h3>
                     <div class="pillars-container">
                         <div class="pillar">
                             <span class="p-label" id="label-hour-pillar">시주(時)</span>
                             <div class="p-chars">
-                                <div class="char stem" id="p-hour-stem">甲</div>
-                                <div class="char branch" id="p-hour-branch">子</div>
+                                <div class="char stem" id="p-hour-stem"></div>
+                                <div class="char branch" id="p-hour-branch"></div>
                             </div>
                         </div>
                         <div class="pillar">
                             <span class="p-label" id="label-day-pillar">일주(日)</span>
                             <div class="p-chars active">
-                                <div class="char stem" id="p-day-stem">丙</div>
-                                <div class="char branch" id="p-day-branch">寅</div>
+                                <div class="char stem" id="p-day-stem"></div>
+                                <div class="char branch" id="p-day-branch"></div>
                             </div>
                         </div>
                         <div class="pillar">
                             <span class="p-label" id="label-month-pillar">월주(月)</span>
                             <div class="p-chars">
-                                <div class="char stem" id="p-month-stem">戊</div>
-                                <div class="char branch" id="p-month-branch">辰</div>
+                                <div class="char stem" id="p-month-stem"></div>
+                                <div class="char branch" id="p-month-branch"></div>
                             </div>
                         </div>
                         <div class="pillar">
                             <span class="p-label" id="label-year-pillar">년주(年)</span>
                             <div class="p-chars">
-                                <div class="char stem" id="p-year-stem">庚</div>
-                                <div class="char branch" id="p-year-branch">申</div>
+                                <div class="char stem" id="p-year-stem"></div>
+                                <div class="char branch" id="p-year-branch"></div>
                             </div>
                         </div>
                     </div>
-                    <p class="pillar-desc" id="result-daymaster-desc">태양과 같은 정열을 가진 병화(丙火)의 기운을 타고나셨습니다.</p>
+                    <div class="analysis-tagline" id="result-daymaster-tagline">"뿌리 깊은 나무가 지혜의 샘물을 만난 형상"</div>
                 </div>
 
-                <!-- Luck Index -->
+                <!-- Core Personality (Large Card) -->
+                <div class="bento-item personality-detail-card span-full">
+                    <h3 id="label-personality">성격 및 타고난 기질 (Personality)</h3>
+                    <div id="result-personality-text" class="rich-text">
+                        <!-- Long narrative -->
+                    </div>
+                </div>
+
+                <!-- Wealth & Career (Large Card) -->
+                <div class="bento-item wealth-career-card span-full">
+                    <h3 id="label-wealth-career">재물운 및 직업적 성취 (Wealth & Career)</h3>
+                    <div id="result-wealth-career-text" class="rich-text">
+                        <!-- Long narrative -->
+                    </div>
+                </div>
+
+                <!-- Luck Index & Elements -->
                 <div class="bento-item luck-card">
-                    <h3 id="label-luck-score">천기 지수</h3>
+                    <h3 id="label-luck-score">천기 지수 (Destiny Index)</h3>
                     <div class="luck-display">
                         <div class="luck-value" id="result-luck-score">88<span>%</span></div>
                         <div class="luck-badge" id="result-luck-desc">매우 맑음</div>
                     </div>
                 </div>
-
-                <!-- Elements Balance -->
                 <div class="bento-item elements-card span-2">
-                    <h3 id="label-elements">오행의 균형 (Balance)</h3>
+                    <h3 id="label-elements">오행의 균형 분석</h3>
                     <div class="elements-chart" id="result-elements-chart"></div>
                 </div>
 
                 <!-- 10-Year Luck Cycle -->
                 <div class="bento-item timeline-card span-full">
-                    <h3 id="label-luck-cycle">10년 대운(大運)의 흐름</h3>
-                    <div class="luck-timeline" id="result-luck-timeline">
-                        <!-- Dynamic cycles -->
+                    <h3 id="label-luck-cycle">생애 주기별 대운(大運)의 흐름</h3>
+                    <div class="luck-timeline" id="result-luck-timeline"></div>
+                    <p id="result-trend-text" class="rich-text"></p>
+                </div>
+
+                <!-- Holistic Life Advice -->
+                <div class="bento-item holistic-advice-card span-full">
+                    <h3 id="label-wisdom">인생의 지혜 및 종합 조언 (Comprehensive Advice)</h3>
+                    <div id="result-wisdom-text" class="rich-text">
+                        <!-- Long narrative -->
                     </div>
-                    <p id="result-trend-text" class="detailed-text"></p>
                 </div>
 
-                <!-- Daily Wisdom -->
-                <div class="bento-item wisdom-card span-2">
-                    <h3 id="label-wisdom">오늘의 지혜 (Daily Wisdom)</h3>
-                    <p id="result-wisdom-text" class="detailed-text"></p>
-                </div>
-
-                <!-- Lucky Treasures -->
-                <div class="bento-item treasures-card">
-                    <h3 id="label-treasures">행운의 보물</h3>
-                    <div class="treasure-list">
-                        <div class="treasure">
-                            <span class="t-label" id="label-color">행운색상</span>
+                <!-- Treasures -->
+                <div class="bento-item treasures-card span-full">
+                    <h3 id="label-treasures">당신을 돕는 귀한 보물</h3>
+                    <div class="treasure-grid">
+                        <div class="treasure-item">
+                            <span class="t-label" id="label-color">행운의 색상</span>
                             <span class="t-value" id="result-color"></span>
                         </div>
-                        <div class="treasure">
-                            <span class="t-label" id="label-direction">행운방향</span>
+                        <div class="treasure-item">
+                            <span class="t-label" id="label-direction">행운의 방향</span>
                             <span class="t-value" id="result-direction"></span>
+                        </div>
+                        <div class="treasure-item">
+                            <span class="t-label" id="label-lucky-item">행운의 아이템</span>
+                            <span class="t-value" id="result-lucky-item"></span>
                         </div>
                     </div>
                 </div>
@@ -175,27 +193,27 @@
 
             <!-- Play More Section -->
             <div class="play-more-section">
-                <h2 id="label-play-more">더 즐겨보기</h2>
+                <h2 id="label-play-more">행운의 여정 더 즐기기</h2>
                 <div class="play-grid">
                     <div class="play-card" id="btn-daily-fortune">
-                        <div class="play-icon">🃏</div>
-                        <h4 id="label-daily-btn">오늘의 운세 카드</h4>
-                        <p id="desc-daily-btn">오늘의 기운을 한 장의 카드로 확인하세요.</p>
+                        <div class="play-icon">🧧</div>
+                        <h4 id="label-daily-btn">오늘의 비책 카드</h4>
+                        <p id="desc-daily-btn">오늘 하루의 기운을 다스리는 비법.</p>
                     </div>
                     <div class="play-card" id="btn-lotto-lab">
-                        <div class="play-icon">🎰</div>
-                        <h4 id="label-lotto-btn">행운번호 연구소</h4>
-                        <p id="desc-lotto-btn">사주 맞춤형 로또 번호를 생성합니다.</p>
+                        <div class="play-icon">🌌</div>
+                        <h4 id="label-lotto-btn">천기누설 로또번호</h4>
+                        <p id="desc-lotto-btn">당신의 기운이 가장 강한 숫자의 조합.</p>
                     </div>
                 </div>
             </div>
             
             <div class="result-actions">
-                <button id="reset-btn" class="btn-secondary">처음으로 돌아가기</button>
+                <button id="reset-btn" class="btn-secondary">처음 화면으로 돌아가기</button>
             </div>
         </section>
 
-        <!-- Play More Modals (Simplified) -->
+        <!-- Modal -->
         <div id="modal-container" class="modal-container hidden">
             <div class="modal-content">
                 <button id="modal-close" class="modal-close">×</button>
